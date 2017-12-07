@@ -26,6 +26,9 @@ def output(vet, name):
             file.write(str(cont)+'\n')
             cont = 1
             anterior = elem
+    file.write(str(anterior))
+    file.write("   ---->   ")
+    file.write(str(cont)+'\n')
     file.close()
 
 
