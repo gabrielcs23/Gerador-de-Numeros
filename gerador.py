@@ -1,9 +1,9 @@
 def random(x):
     vet = []
-    a = 3
-    m = 11
-    c = 2
-    for i in range(0, 100):
+    a = pow(7, 5)
+    m = pow(2, 48)
+    c = 11
+    for i in range(0, 500):
         x = (a*x+c) % m
         u = x/m
         vet.append(u)
@@ -19,22 +19,20 @@ def output(vet, name):
         if anterior == elem:
             cont += 1
         else:
-            # formato de impressão:
-            # numero   ---->   qtd
             file.write(str(anterior))
-            file.write("   ---->   ")
+            file.write('\t')
             file.write(str(cont)+'\n')
             cont = 1
             anterior = elem
     file.write(str(anterior))
-    file.write("   ---->   ")
-    file.write(str(cont)+'\n')
+    file.write('\t')
+    file.write(str(cont))
     file.close()
 
 
 # ************* Main ************* #
 
-seed = int(input())
+seed = int(input("Seed: "))
 array = random(seed)
-output(array, "teste")
+output(array, input("Nome Arquivo: "))
 
