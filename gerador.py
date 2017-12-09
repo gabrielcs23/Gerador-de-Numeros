@@ -6,7 +6,7 @@ def random(x):
     for i in range(0, 500):
         x = (a*x+c) % m
         u = x/m
-        vet.append(u)
+        vet.append(round(u, 3))
     vet.sort()
     return vet
 
